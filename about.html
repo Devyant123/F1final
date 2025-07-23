@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - F1 Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+<!-- Header -->
+  <header class="fixed w-full bg-gray-800 shadow z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex flex-col items-center leading-tight">
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-white">F</span><span class="text-red-600">1</span>
+  </span>
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+  </span>
+</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="about.html" class="hover:text-red-500">About</a>
+        <a href="program.html" class="hover:text-red-500">Programs</a>
+        <a href="packages.html" class="hover:text-red-500">Packages</a>
+        <a href="contacts.html" class="hover:text-red-500">Contact</a>
+      </nav>
+     <button onclick="document.getElementById('enrollModal').classList.remove('hidden')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire Now</button>
+    
+    </div>
+  </header>
+
+  
+
+  <header class="bg-gray-800 p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <!-- <a href="index.html" class="text-3xl font-bold italic">
+        <span class="text-white">F</span><span class="text-red-600">1</span><br>
+        <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+      </a>
+    -->
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-16 space-y-12">
+    <section>
+      <h1 class="text-4xl font-bold text-center mb-8">About F1 Fitness</h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        F1 Fitness is a premier fitness destination known for transforming lives through dedication, discipline, and top-tier amenities. Our facility combines cutting-edge equipment, expertly trained staff, and a welcoming community atmosphere to help every member reach their full potential. Whether you're just starting your fitness journey or pushing to new personal records, F1 Fitness is your perfect partner.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-semibold mb-6">Our Mission</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        To inspire and empower individuals to lead healthier lives by providing exceptional fitness experiences, professional guidance, and an inclusive space that motivates everyone to achieve their goals.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-semibold mb-6">Why Choose Us?</h2>
+      <ul class="list-disc list-inside text-gray-300 text-lg space-y-2">
+        <li>World-class personal and group training programs</li>
+        <li>State-of-the-art machines and workout zones</li>
+        <li>24/7 facility access and flexible memberships</li>
+        <li>Expert trainers with years of industry experience</li>
+        <li>Clean, safe, and supportive training environment</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-semibold mb-6">Our Commitment</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        At F1 Fitness, we are committed to helping every member find the best version of themselves. Our team is here to provide the resources, motivation, and guidance you need to crush your fitness goals.
+      </p>
+    </section>
+  </main>
+
+<!-- Enrolment Form Modal -->
+<div id="enrollModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6 relative">
+    <button onclick="document.getElementById('enrollModal').classList.add('hidden')" class="absolute top-2 right-2 text-gray-500 hover:text-red-600">&times;</button>
+    <h2 class="text-2xl font-bold mb-4">Gym Enrolment Form</h2>
+    <form class="space-y-4" method="POST" action="/submit-enrolment">
+      <div>
+        <label class="block text-sm font-medium">Full Name</label>
+        <input type="text" name="fullname" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" name="email" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Phone Number</label>
+        <input type="tel" name="phone" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Preferred Plan</label>
+        <select name="plan" class="w-full mt-1 p-2 border rounded">
+          <option>Monthly</option>
+          <option>Quarterly</option>
+          <option>Yearly</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>

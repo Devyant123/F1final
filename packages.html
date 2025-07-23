@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages - F1 Fitness</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-gray-800 shadow z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex flex-col items-center leading-tight">
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-white">F</span><span class="text-red-600">1</span>
+  </span>
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+  </span>
+</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="about.html" class="hover:text-red-500">About</a>
+        <a href="program.html" class="hover:text-red-500">Programs</a>
+        <a href="packages.html" class="hover:text-red-500">Packages</a>
+        <a href="contacts.html" class="hover:text-red-500">Contact</a>
+      </nav>
+     <button onclick="document.getElementById('enrollModal').classList.remove('hidden')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire Now</button>
+    
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-24">
+    <h1 class="text-4xl font-bold text-center mb-12">Membership Packages</h1>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Monthly Plan -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold mb-2">Monthly Plan</h2>
+        <p class="text-red-500 text-3xl font-bold mb-4">₹1499</p>
+        <ul class="text-gray-300 space-y-2 mb-4">
+          <li>Unlimited Gym Access</li>
+          <li>Basic Group Classes</li>
+          <li>Fitness Tracking</li>
+        </ul>
+        <button onclick="showScreenshotModal('Monthly Plan')" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full font-semibold">Join Now</button>
+      </div>
+
+      <!-- Quarterly Plan -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center border-2 border-red-500">
+        <h2 class="text-2xl font-bold mb-2">Quarterly Plan</h2>
+        <p class="text-red-500 text-3xl font-bold mb-4">₹5999</p>
+        <ul class="text-gray-300 space-y-2 mb-4">
+          <li>Unlimited Gym Access</li>
+          <li>All Group Classes</li>
+          <li>Nutrition Guidance</li>
+        </ul>
+        <button onclick="showScreenshotModal('Quarterly Plan')" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full font-semibold">Join Now</button>
+      </div>
+
+      <!-- Yearly Plan -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold mb-2">Yearly Plan</h2>
+        <p class="text-red-500 text-3xl font-bold mb-4">₹13999</p>
+        <ul class="text-gray-300 space-y-2 mb-4">
+          <li>Unlimited Gym Access</li>
+          <li>Personal Training</li>
+          <li>Customized Diet Plan</li>
+        </ul>
+        <button onclick="showScreenshotModal('Yearly Plan')" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full font-semibold">Join Now</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Screenshot Modal -->
+ <!-- Screenshot Modal -->
+<div id="screenshotModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center">
+  <div class="bg-gray-800 p-6 rounded-lg w-full max-w-md relative text-center">
+    <button onclick="document.getElementById('screenshotModal').classList.add('hidden')" class="absolute top-2 right-4 text-white text-2xl">&times;</button>
+    <h2 id="planTitle" class="text-2xl font-bold text-red-500 mb-4">Payment QR</h2>
+    <img src="payment_qr.jpg" alt="QR Code" class="mx-auto w-48 h-48 object-contain mb-4 border border-gray-300 rounded-lg">
+    <p class="text-white text-lg">Please pay on above QR code & share the screenshot on below</p>
+    <p class="mt-2 text-sm text-gray-300">WhatsApp: <span class="text-green-400 font-semibold">+91-9876543210</span></p>
+  </div>
+</div>
+
+
+  <script>
+    function showScreenshotModal(planName) {
+      document.getElementById('planTitle').innerText = planName;
+      document.getElementById('screenshotModal').classList.remove('hidden');
+    }
+  </script>
+
+<!-- Enrolment Form Modal -->
+<div id="enrollModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6 relative">
+    <button onclick="document.getElementById('enrollModal').classList.add('hidden')" class="absolute top-2 right-2 text-gray-500 hover:text-red-600">&times;</button>
+    <h2 class="text-2xl font-bold mb-4">Gym Enrolment Form</h2>
+    <form class="space-y-4" method="POST" action="/submit-enrolment">
+      <div>
+        <label class="block text-sm font-medium">Full Name</label>
+        <input type="text" name="fullname" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" name="email" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Phone Number</label>
+        <input type="tel" name="phone" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Preferred Plan</label>
+        <select name="plan" class="w-full mt-1 p-2 border rounded">
+          <option>Monthly</option>
+          <option>Quarterly</option>
+          <option>Yearly</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>

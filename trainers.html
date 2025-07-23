@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trainers - F1 Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+
+  <!-- Header -->
+  <header class="fixed w-full bg-gray-800 shadow z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex flex-col items-center leading-tight">
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-white">F</span><span class="text-red-600">1</span>
+  </span>
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+  </span>
+</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="about.html" class="hover:text-red-500">About</a>
+        <a href="program.html" class="hover:text-red-500">Programs</a>
+        <a href="packages.html" class="hover:text-red-500">Packages</a>
+        <a href="contacts.html" class="hover:text-red-500">Contact</a>
+      </nav>
+     <button onclick="document.getElementById('enrollModal').classList.remove('hidden')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire Now</button>
+    
+    </div>
+  </header>
+
+
+  <main class="max-w-6xl mx-auto px-4 py-16 space-y-16">
+
+    <a></a>
+    <!-- Manager Section -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8 text-center">Manager</h2>
+      <div class="grid md:grid-cols-1 gap-8">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <img src="trainer1.jpg" alt="Manager" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+          <h3 class="text-2xl font-bold mb-2">Alex Johnson</h3>
+          <p class="text-gray-300">General Manager with 15+ years of experience in gym operations, member success, and staff training.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Trainers Section -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8 text-center">Personal Trainers</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <img src="trainer2.jpg" alt="Personal Trainer" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+          <h3 class="text-2xl font-bold mb-2">Maria Lopez</h3>
+          <p class="text-gray-300">Certified Personal Trainer and Nutritionist specializing in customized fat loss and strength programs.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <img src="trainer4.jpg" alt="Personal Trainer" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+          <h3 class="text-2xl font-bold mb-2">Jason Lee</h3>
+          <p class="text-gray-300">Expert in sports performance and hypertrophy training, with a focus on elite client transformation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floor Trainers Section -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8 text-center">Floor Trainers</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <img src="trainer3.jpg" alt="Floor Trainer" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+          <h3 class="text-2xl font-bold mb-2">Rahul Mehra</h3>
+          <p class="text-gray-300">CrossFit Level 2 Trainer with a strong focus on mobility, safety, and endurance building.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <img src="trainer5.jpg" alt="Floor Trainer" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+          <h3 class="text-2xl font-bold mb-2">Neha Sharma</h3>
+          <p class="text-gray-300">Group fitness instructor helping members stay active and motivated through daily floor routines.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <img src="trainer6.jpg" alt="Floor Trainer" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+          <h3 class="text-2xl font-bold mb-2">Aman Verma</h3>
+          <p class="text-gray-300">Assists in gym floor management, machine demonstrations, and member inquiries for daily workouts.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- Enrolment Form Modal -->
+<div id="enrollModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6 relative">
+    <button onclick="document.getElementById('enrollModal').classList.add('hidden')" class="absolute top-2 right-2 text-gray-500 hover:text-red-600">&times;</button>
+    <h2 class="text-2xl font-bold mb-4">Gym Enrolment Form</h2>
+    <form class="space-y-4" method="POST" action="/submit-enrolment">
+      <div>
+        <label class="block text-sm font-medium">Full Name</label>
+        <input type="text" name="fullname" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" name="email" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Phone Number</label>
+        <input type="tel" name="phone" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Preferred Plan</label>
+        <select name="plan" class="w-full mt-1 p-2 border rounded">
+          <option>Monthly</option>
+          <option>Quarterly</option>
+          <option>Yearly</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>

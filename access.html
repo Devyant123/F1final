@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24/7 Access - F1 Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="fixed w-full bg-gray-800 shadow z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex flex-col items-center leading-tight">
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-white">F</span><span class="text-red-600">1</span>
+  </span>
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+  </span>
+</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="about.html" class="hover:text-red-500">About</a>
+        <a href="program.html" class="hover:text-red-500">Programs</a>
+        <a href="packages.html" class="hover:text-red-500">Packages</a>
+        <a href="contacts.html" class="hover:text-red-500">Contact</a>
+      </nav>
+     <button onclick="document.getElementById('enrollModal').classList.remove('hidden')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire Now</button>
+    
+    </div>
+  </header>
+
+<br><br>
+
+<!-- Main Content -->
+  <main class="pt-28 pb-16 px-4 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-center text-red-500 mb-10">Gym Timings</h1>
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+      <table class="w-full text-left table-auto border-collapse">
+        <thead>
+          <tr class="text-red-500 border-b border-gray-600">
+            <th class="py-3 px-4">Day</th>
+            <th class="py-3 px-4">Opening Time</th>
+            <th class="py-3 px-4">Closing Time</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-300">
+          <tr class="border-b border-gray-700">
+            <td class="py-3 px-4">Monday</td>
+            <td class="py-3 px-4">5:00 AM</td>
+            <td class="py-3 px-4">11:00 PM</td>
+          </tr>
+          <tr class="border-b border-gray-700">
+            <td class="py-3 px-4">Tuesday</td>
+            <td class="py-3 px-4">5:00 AM</td>
+            <td class="py-3 px-4">11:00 PM</td>
+          </tr>
+          <tr class="border-b border-gray-700">
+            <td class="py-3 px-4">Wednesday</td>
+            <td class="py-3 px-4">5:00 AM</td>
+            <td class="py-3 px-4">11:00 PM</td>
+          </tr>
+          <tr class="border-b border-gray-700">
+            <td class="py-3 px-4">Thursday</td>
+            <td class="py-3 px-4">5:00 AM</td>
+            <td class="py-3 px-4">11:00 PM</td>
+          </tr>
+          <tr class="border-b border-gray-700">
+            <td class="py-3 px-4">Friday</td>
+            <td class="py-3 px-4">5:00 AM</td>
+            <td class="py-3 px-4">11:00 PM</td>
+          </tr>
+          <tr class="border-b border-gray-700">
+            <td class="py-3 px-4">Saturday</td>
+            <td class="py-3 px-4">5:00 AM</td>
+            <td class="py-3 px-4">11:00 PM</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4">Sunday</td>
+            <td class="py-3 px-4">1:00 PM</td>
+            <td class="py-3 px-4">11:00 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm">&copy; 2025 F1 Fitness. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="https://www.instagram.com/f1_fitnesscr/?hl=en" class="hover:text-red-500">Instagram</a>
+        <a href="https://www.facebook.com/F1FitnessCr/" class="hover:text-red-500">Facebook</a>
+        <a href="#" class="hover:text-red-500">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- Enrolment Form Modal -->
+<div id="enrollModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6 relative">
+    <button onclick="document.getElementById('enrollModal').classList.add('hidden')" class="absolute top-2 right-2 text-gray-500 hover:text-red-600">&times;</button>
+    <h2 class="text-2xl font-bold mb-4">Gym Enrolment Form</h2>
+    <form class="space-y-4" method="POST" action="/submit-enrolment">
+      <div>
+        <label class="block text-sm font-medium">Full Name</label>
+        <input type="text" name="fullname" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" name="email" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Phone Number</label>
+        <input type="tel" name="phone" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Preferred Plan</label>
+        <select name="plan" class="w-full mt-1 p-2 border rounded">
+          <option>Monthly</option>
+          <option>Quarterly</option>
+          <option>Yearly</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>

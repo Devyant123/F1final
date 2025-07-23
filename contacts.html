@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - F1 Fitness</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+<!-- Header -->
+  <header class="fixed w-full bg-gray-800 shadow z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex flex-col items-center leading-tight">
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-white">F</span><span class="text-red-600">1</span>
+  </span>
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+  </span>
+</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="about.html" class="hover:text-red-500">About</a>
+        <a href="program.html" class="hover:text-red-500">Programs</a>
+        <a href="packages.html" class="hover:text-red-500">Packages</a>
+        <a href="contacts.html" class="hover:text-red-500">Contact</a>
+      </nav>
+     <button onclick="document.getElementById('enrollModal').classList.remove('hidden')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire Now</button>
+    
+    </div>
+  </header>
+
+  <header class="bg-gray-800 p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <!-- <a href="index.html" class="text-3xl font-bold italic">
+        <span class="text-white">F</span><span class="text-red-600">1</span><br />
+        <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+      </a>
+    -->
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold text-center mb-12">Contact Us</h1>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
+        <p class="mb-2">Email: info@f1fitness.com</p>
+        <p class="mb-2">Phone: +91-9876543210</p>
+
+        <form id="contactForm" class="space-y-4">
+          <input type="text" placeholder="Your Name" required class="w-full p-2 rounded text-black" />
+          <input type="email" placeholder="Your Email" required class="w-full p-2 rounded text-black" />
+          <textarea placeholder="Your Message" required class="w-full p-2 rounded text-black"></textarea>
+          <button type="submit" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded font-semibold">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Our Branches</h2>
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xl font-bold text-red-500 mb-2">F1 Fitness Noida 135</h3>
+            <p class="mb-1">Unit no- 45, Assotech Business Cresterra, Sector 135, Noida</p>
+            <p class="mb-1">Email: noida@f1fitness.com</p>
+            <p class="mb-2">Phone: +91-9876101350</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.4337456629837!2d77.39930507408809!3d28.49659509024338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce9c801c717f1%3A0x84363497008cd873!2sF1%20Fitness%20Noida%20135!5e0!3m2!1sen!2sin!4v1752926702488!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-red-500 mb-2">F1 Fitness Indirapuram</h3>
+            <p class="mb-1">2nd floor, Aditya Mall, Aditya Mega City, Vaibhav Khand, Indirapuram</p>
+            <p class="mb-1">Email: indirapuram@f1fitness.com</p>
+            <p class="mb-2">Phone: +91-9876112345</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7009611171316!2d77.3590678740946!3d28.638723283802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb9f5a10ae9d%3A0x61d2dcd8748f73a7!2sF1%20Fitness!5e0!3m2!1sen!2sin!4v1752926083375!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-red-500 mb-2">F1 Fitness Crossing Republik</h3>
+            <p class="mb-1">237 Second Floor Orbit Plaza, Crossings Republik</p>
+            <p class="mb-1">Email: crossing@f1fitness.com</p>
+            <p class="mb-2">Phone: +91-9876123456</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9541817452446!2d77.43273597409427!3d28.63113528414664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceffb2f654b7d%3A0x488c0ae2e37b63a9!2sF1%20Fitness!5e0!3m2!1sen!2sin!4v1752926771296!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Message sent successfully!");
+      // Add backend submission here if needed
+    });
+  </script>
+
+<!-- Enrolment Form Modal -->
+<div id="enrollModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6 relative">
+    <button onclick="document.getElementById('enrollModal').classList.add('hidden')" class="absolute top-2 right-2 text-gray-500 hover:text-red-600">&times;</button>
+    <h2 class="text-2xl font-bold mb-4">Gym Enrolment Form</h2>
+    <form class="space-y-4" method="POST" action="/submit-enrolment">
+      <div>
+        <label class="block text-sm font-medium">Full Name</label>
+        <input type="text" name="fullname" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" name="email" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Phone Number</label>
+        <input type="tel" name="phone" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Preferred Plan</label>
+        <select name="plan" class="w-full mt-1 p-2 border rounded">
+          <option>Monthly</option>
+          <option>Quarterly</option>
+          <option>Yearly</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>

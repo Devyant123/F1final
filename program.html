@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs - F1 Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    
+<!-- Header -->
+  <header class="fixed w-full bg-gray-800 shadow z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex flex-col items-center leading-tight">
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-white">F</span><span class="text-red-600">1</span>
+  </span>
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+  </span>
+</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="about.html" class="hover:text-red-500">About</a>
+        <a href="program.html" class="hover:text-red-500">Programs</a>
+        <a href="packages.html" class="hover:text-red-500">Packages</a>
+        <a href="contacts.html" class="hover:text-red-500">Contact</a>
+      </nav>
+     <button onclick="document.getElementById('enrollModal').classList.remove('hidden')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire Now</button>
+    
+    </div>
+  </header>
+
+
+  <header class="bg-gray-800 p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <!--   <a href="index.html" class="text-3xl font-bold italic">
+        <span class="text-white">F</span><span class="text-red-600">1</span><br />
+        <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+      </a>
+    -->
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold text-center mb-12">Our Fitness Programs</h1>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Program 1 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Strength Training</h2>
+        <p class="text-gray-300">Build muscle and boost your metabolism with our strength-focused programs. Perfect for all levels using free weights, machines, and resistance bands.</p>
+      </div>
+
+      <!-- Program 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">HIIT Workouts</h2>
+        <p class="text-gray-300">High-Intensity Interval Training to burn fat, improve stamina, and increase cardiovascular fitness with time-efficient sessions.</p>
+      </div>
+
+      <!-- Program 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Yoga & Flexibility</h2>
+        <p class="text-gray-300">Enhance mobility and reduce stress through guided yoga sessions and flexibility improvement routines for all experience levels.</p>
+      </div>
+
+      <!-- Program 4 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Cardio Blast</h2>
+        <p class="text-gray-300">Improve endurance and heart health with structured cardio routines that keep you motivated and energized.</p>
+      </div>
+
+      <!-- Program 5 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Weight Loss Program</h2>
+        <p class="text-gray-300">A dedicated track combining personal training, nutrition planning, and goal tracking to help you safely lose weight and keep it off.</p>
+      </div>
+
+      <!-- Program 6 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Personal Coaching</h2>
+        <p class="text-gray-300">1-on-1 coaching customized to your needs with certified professionals focused on your specific fitness aspirations.</p>
+      </div>
+    </div>
+  </main>
+
+<!-- Enrolment Form Modal -->
+<div id="enrollModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6 relative">
+    <button onclick="document.getElementById('enrollModal').classList.add('hidden')" class="absolute top-2 right-2 text-gray-500 hover:text-red-600">&times;</button>
+    <h2 class="text-2xl font-bold mb-4">Gym Enrolment Form</h2>
+    <form class="space-y-4" method="POST" action="/submit-enrolment">
+      <div>
+        <label class="block text-sm font-medium">Full Name</label>
+        <input type="text" name="fullname" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" name="email" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Phone Number</label>
+        <input type="tel" name="phone" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Preferred Plan</label>
+        <select name="plan" class="w-full mt-1 p-2 border rounded">
+          <option>Monthly</option>
+          <option>Quarterly</option>
+          <option>Yearly</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>
